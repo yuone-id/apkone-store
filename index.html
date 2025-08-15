@@ -6,101 +6,114 @@
     <title>Yuone Store - Download APK</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #0f0f0f;
-            color: #fff;
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            text-align: center;
+            background-color: #0e0e0e;
+            color: #fff;
         }
+        /* HEADER */
         header {
-            padding: 30px;
+            min-height: 100vh;
             background: linear-gradient(135deg, #ff0066, #6600ff);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
         }
         header img {
-            max-width: 100px;
+            max-width: 140px;
+            margin-bottom: 20px;
         }
         header h1 {
-            margin: 10px 0 5px;
-            font-size: 2em;
+            font-size: 3rem;
+            margin: 10px 0;
         }
         header p {
-            font-size: 1.2em;
-            opacity: 0.8;
+            font-size: 1.2rem;
+            opacity: 0.85;
+            max-width: 500px;
         }
-        .description {
-            max-width: 700px;
+        /* BUTTON */
+        .download-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            margin-top: 30px;
+            background: #00ffcc;
+            color: #000;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0,255,204,0.4);
+        }
+        .download-btn:hover {
+            background: #00e6b8;
+            box-shadow: 0 6px 20px rgba(0,255,204,0.6);
+        }
+        /* SECTION */
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
             margin: auto;
-            padding: 20px;
-            font-size: 1.1em;
+            text-align: center;
+        }
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
         }
         .gallery {
             display: flex;
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
-            padding: 20px;
         }
-        .phone {
-            background: url('https://i.ibb.co/8N3wHhs/phone-mockup.png') no-repeat center;
-            background-size: contain;
-            width: 200px;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 25px;
+        .gallery img {
+            width: 250px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
         }
-        .phone img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .download-btn {
-            display: inline-block;
-            padding: 15px 30px;
-            margin: 20px 0;
-            background: #ff0066;
-            color: white;
-            font-size: 1.2em;
-            border-radius: 30px;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-        .download-btn:hover {
-            background: #cc0052;
+        .gallery img:hover {
+            transform: translateY(-5px);
         }
         footer {
+            text-align: center;
+            padding: 20px;
             background: #111;
-            padding: 10px;
-            font-size: 0.9em;
+            font-size: 0.9rem;
             opacity: 0.7;
+        }
+        footer a {
+            color: #ff0066;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
+    <!-- HEADER -->
     <header>
         <img src="yuone-id.png" alt="Yuone Store Logo">
         <h1>Yuone Store</h1>
-        <p>Top Up Game & Voucher Termurah</p>
+        <p>Top Up Game & Voucher Digital Termurah • Cepat • Aman</p>
+        <a href="https://github.com/yuone-id/apkone-store/releases/download/v1.0.0/app-debug.apk" class="download-btn">⬇ Download APK</a>
     </header>
 
-    <section class="description">
-        Yuone Store adalah aplikasi top-up game dan pembelian voucher digital dengan harga terjangkau dan proses cepat. 
-        Dapatkan berbagai pilihan game populer dan voucher favorit Anda hanya dalam satu aplikasi.
+    <!-- GALLERY -->
+    <section>
+        <h2>Tangkapan Layar</h2>
+        <div class="gallery">
+            <img src="gambar1.jpg" alt="Screenshot 1">
+            <img src="gambar2.jpg" alt="Screenshot 2">
+            <img src="gambar3.jpg" alt="Screenshot 3">
+        </div>
     </section>
 
-    <h2>Tangkapan Layar</h2>
-    <div class="gallery">
-        <div class="phone"><img src="gambar1.jpg" alt="Screenshot 1"></div>
-        <div class="phone"><img src="gambar2.jpg" alt="Screenshot 2"></div>
-        <div class="phone"><img src="gambar3.jpg" alt="Screenshot 3"></div>
-    </div>
-
-    <a href="https://github.com/yuone-id/apkone-store/releases/tag/v1.0.0" class="download-btn">⬇ Download Sekarang</a>
-
+    <!-- FOOTER -->
     <footer>
-        © 2025 Yuone Store • <a href="https://github.com/yuone-id" style="color:#ff0066;">GitHub</a>
+        © 2025 Yuone Store • <a href="https://github.com/yuone-id">GitHub</a>
     </footer>
 </body>
 </html>
