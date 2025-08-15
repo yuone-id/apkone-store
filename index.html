@@ -4,59 +4,86 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Yuone Store — Download APK Resmi</title>
-  <meta name="description" content="Unduh APK resmi Yuone Store. Aplikasi top up game & voucher digital yang cepat, aman, dan mudah digunakan." />
+  <meta name="description" content="Unduh APK resmi Yuone Store. Top up game & voucher digital dengan cepat, aman, dan mudah." />
+  <meta property="og:title" content="Yuone Store — Download APK Resmi" />
+  <meta property="og:description" content="Top up game & voucher digital dengan cepat, aman, dan mudah. Unduh APK resmi terbaru di sini." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/yuone-id/apkone-store/main/logo.png" />
+  <meta name="theme-color" content="#6c5ce7" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0b1020; --card:#121733; --muted:#8ea2ff; --text:#e8ecff; --accent:#70f;
-      --ok:#22c55e; --warn:#f59e0b; --danger:#ef4444; --stroke:rgba(255,255,255,.08);
+      --bg:#0b1020; --bg2:#0e1430; --card:#111736; --muted:#9fb0ff; --text:#eef1ff; --accent:#6c5ce7; --accent2:#00d4ff; --stroke:rgba(255,255,255,.08);
+      --ok:#22c55e; --warn:#f59e0b; --danger:#ef4444;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;background:radial-gradient(1200px 600px at 10% -10%, #1a2358 0%, transparent 70%),radial-gradient(900px 500px at 90% 10%, #5b21b6 0%, transparent 70%), var(--bg); color:var(--text)}
-    .wrap{max-width:1100px;margin:0 auto;padding:24px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;background:radial-gradient(1200px 600px at 10% -10%, #18205a 0%, transparent 70%),radial-gradient(900px 500px at 90% 10%, #4f2ed6 0%, transparent 70%), var(--bg); color:var(--text)}
+    a{color:inherit}
+
+    .wrap{max-width:1180px;margin:0 auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 0}
     .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,#7c3aed,#22d3ee);display:grid;place-items:center;box-shadow:0 10px 30px rgba(124,58,237,.35)}
-    .logo span{font-weight:800;color:white}
-    .nav a{color:#cdd6ff;text-decoration:none;margin-left:18px;font-weight:600;opacity:.9}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid var(--stroke);border-radius:20px}
-    .hero{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center}
-    .hero .left{padding:32px}
-    .hero h1{font-size:40px;line-height:1.1;margin:0 0 12px;font-weight:800}
-    .hero p{opacity:.9;margin:0 0 20px;font-size:16px}
-    .badges{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
-    .badge{font-size:12px;padding:8px 10px;border-radius:999px;border:1px solid var(--stroke);background:rgba(255,255,255,.04)}
-    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
-    .btn{appearance:none;border:none;border-radius:14px;padding:14px 18px;font-weight:800;letter-spacing:.2px;cursor:pointer}
+    .logo{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,#7c3aed,#22d3ee);display:grid;place-items:center;box-shadow:0 10px 30px rgba(124,58,237,.35);overflow:hidden}
+    .logo img{width:100%;height:100%;object-fit:cover}
+    .brand-title{display:flex;flex-direction:column}
+    .brand-title .name{font-weight:800;font-size:18px}
+    .brand-title .tag{font-size:12px;color:#cdd6ff}
+    nav a{color:#cdd6ff;text-decoration:none;margin-left:18px;font-weight:600;opacity:.9}
+
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid var(--stroke);border-radius:22px}
+
+    .hero{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center}
+    .hero .left{padding:36px}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;border:1px solid var(--stroke);background:rgba(255,255,255,.04);font-size:12px;color:#cdd6ff}
+    .hero h1{font-size:42px;line-height:1.05;margin:12px 0 10px;font-weight:800}
+    .gradient{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{opacity:.92;margin:0 0 18px;font-size:16px}
+    .hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+    .btn{appearance:none;border:none;border-radius:14px;padding:14px 18px;font-weight:800;letter-spacing:.2px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:10px}
     .btn.primary{background:linear-gradient(90deg,#7c3aed,#22d3ee);color:white;box-shadow:0 10px 30px rgba(124,58,237,.35)}
     .btn.ghost{background:rgba(255,255,255,.06);border:1px solid var(--stroke);color:#cdd6ff}
-    .meta{display:flex;align-items:center;gap:14px;font-size:12px;color:#cdd6ff;opacity:.9;margin-top:10px}
-    .phone{padding:24px}
+    .meta{display:flex;align-items:center;gap:12px;font-size:12px;color:#cdd6ff;opacity:.9;margin-top:12px;flex-wrap:wrap}
+    .chip{display:inline-flex;align-items:center;gap:8px;font-size:12px;padding:8px 10px;border-radius:999px;border:1px solid var(--stroke);background:rgba(255,255,255,.04)}
+
+    .phone{padding:26px}
     .mock{width:100%;aspect-ratio:9/18;border-radius:28px;border:1px solid var(--stroke);background:linear-gradient(160deg,#0d1430, #1b1f4a);box-shadow:0 20px 60px rgba(0,0,0,.35);position:relative;overflow:hidden}
     .mock:before{content:"";position:absolute;inset:0;background:radial-gradient(600px 400px at 70% 10%, rgba(255,255,255,.08), transparent 60%)}
     .mock-grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:16px}
     .mock .tile{border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02));border:1px solid var(--stroke)}
 
-    .sections{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
-    .section{padding:20px}
-    .section h3{margin:0 0 8px}
-    .list{margin:0;padding:0;list-style:none}
-    .list li{margin:8px 0;opacity:.92}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+    .feature{padding:22px}
+    .feature h3{margin:0 0 8px}
+    .muted{opacity:.9;color:#d7deff}
+
+    .screens{margin-top:26px}
+    .carousel{position:relative;overflow:hidden;border-radius:20px;border:1px solid var(--stroke)}
+    .track{display:flex;transition:transform .5s ease;will-change:transform}
+    .slide{min-width:100%;background:#0f1536;display:grid;place-items:center}
+    .slide img{width:100%;max-height:560px;object-fit:cover}
+    .dots{display:flex;gap:8px;justify-content:center;margin-top:10px}
+    .dot{width:8px;height:8px;border-radius:999px;background:#7180ff;opacity:.4;cursor:pointer}
+    .dot.active{opacity:1}
 
     .how{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
-    .how .step{padding:20px}
-    .step h4{margin:0 0 10px}
+    .step{padding:22px}
 
-    .footer{margin:28px 0 10px;display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center;opacity:.9}
+    .footer{margin:32px 0 14px;display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center;opacity:.9}
 
-    .chip{display:inline-flex;align-items:center;gap:8px;font-size:12px;padding:8px 10px;border-radius:999px;border:1px solid var(--stroke);background:rgba(255,255,255,.04)}
+    /* Sticky CTA for mobile */
+    .sticky-cta{position:fixed;left:0;right:0;bottom:0;background:linear-gradient(90deg,#7c3aed,#22d3ee);display:none;justify-content:center;padding:12px;z-index:50}
+    .sticky-cta a{color:#fff;text-decoration:none;font-weight:800}
 
     @media(max-width:980px){
       .hero{grid-template-columns:1fr}
       .phone{grid-row:1}
+      .features{grid-template-columns:1fr}
+      .how{grid-template-columns:1fr}
+      .sticky-cta{display:flex}
+      body{padding-bottom:64px}
     }
   </style>
 </head>
@@ -64,40 +91,38 @@
   <div class="wrap">
     <header>
       <div class="brand">
-        <div class="logo"><span>Y</span></div>
-        <div>
-          <div style="font-weight:800;font-size:18px">Yuone Store</div>
-          <div style="font-size:12px;color:#cdd6ff">Top Up Game & Voucher Digital</div>
+        <div class="logo"><img src="https://raw.githubusercontent.com/yuone-id/apkone-store/main/logo.png" alt="Yuone Store" onerror="this.remove()"></div>
+        <div class="brand-title">
+          <div class="name">Yuone Store</div>
+          <div class="tag">Top Up Game & Voucher Digital</div>
         </div>
       </div>
-      <nav class="nav">
+      <nav>
         <a href="#fitur">Fitur</a>
+        <a href="#cuplikan">Cuplikan</a>
         <a href="#cara">Cara Install</a>
-        <a href="#faq">FAQ</a>
         <a id="privacyLink" href="#" target="_blank" rel="noopener">Kebijakan Privasi</a>
       </nav>
     </header>
 
+    <!-- HERO -->
     <section class="hero card">
       <div class="left">
-        <div class="badges">
-          <span class="badge">Aman & Cepat</span>
-          <span class="badge">Tanpa Iklan</span>
-          <span class="badge">Dukungan e-Wallet</span>
-        </div>
-        <h1>Download <span style="background:linear-gradient(90deg,#7c3aed,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent">Yuone Store</span></h1>
-        <p>Top up game & beli voucher digital dalam hitungan detik. Unduh APK resmi terbaru dari halaman ini.</p>
-
+        <span class="eyebrow">Aman · Cepat · Tanpa Iklan</span>
+        <h1>Download <span class="gradient">Yuone Store</span></h1>
+        <p>Kendalikan top up game & pembelian voucher digital hanya dalam beberapa ketukan. Unduh APK resmi terbaru langsung dari GitHub Releases.</p>
         <div class="cta">
-          <a id="downloadBtn" class="btn primary" href="#" download>
+          <a id="downloadBtn" class="btn primary" href="https://github.com/yuone-id/apkone-store/releases/tag/v1.0.0" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l4-4m-4 4l-4-4M4 21h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <span id="downloadLabel">Download APK</span>
           </a>
-          <a id="releaseBtn" class="btn ghost" href="#" target="_blank" rel="noopener">Lihat Catatan Rilis</a>
+          <a id="releaseBtn" class="btn ghost" href="https://github.com/yuone-id/apkone-store/releases/tag/v1.0.0" target="_blank" rel="noopener">Lihat Catatan Rilis</a>
         </div>
         <div class="meta">
-          <span class="chip">Versi: <strong id="version">-</strong></span>
-          <span class="chip">Dirilis: <strong id="date">-</strong></span>
-          <span class="chip">Ukuran: <strong id="size">-</strong></span>
+          <span class="chip">Versi: <strong id="version">v1.0.0</strong></span>
+          <span class="chip">Dirilis: <strong id="date">—</strong></span>
+          <span class="chip">Ukuran: <strong id="size">—</strong></span>
+          <span class="chip">Android: <strong>5.0+</strong></span>
         </div>
       </div>
       <div class="phone">
@@ -116,43 +141,50 @@
       </div>
     </section>
 
-    <section id="fitur" class="sections">
-      <div class="card section">
-        <h3>Top Up Instan</h3>
-        <ul class="list">
-          <li>Saldo game masuk seketika*</li>
-          <li>Dukungan MLBB, Free Fire, PUBG, Valorant, Genshin, dan lainnya</li>
-        </ul>
+    <!-- FITUR -->
+    <section id="fitur" class="features">
+      <div class="card feature">
+        <h3>⚡ Top Up Instan</h3>
+        <p class="muted">Saldo game masuk seketika* untuk MLBB, Free Fire, PUBG, Valorant, Genshin, dan lainnya.</p>
       </div>
-      <div class="card section">
-        <h3>Pembayaran Fleksibel</h3>
-        <ul class="list">
-          <li>Transfer Bank & Virtual Account</li>
-          <li>e-Wallet: DANA, OVO, GoPay</li>
-        </ul>
+      <div class="card feature">
+        <h3>💳 Pembayaran Fleksibel</h3>
+        <p class="muted">Dukungan Transfer Bank/VA & e-Wallet (DANA, OVO, GoPay) dengan verifikasi aman.</p>
       </div>
-      <div class="card section">
-        <h3>Keamanan di Utamakan</h3>
-        <ul class="list">
-          <li>File APK ditandatangani (release keystore)</li>
-          <li>Unduhan dari GitHub Releases resmi</li>
-        </ul>
+      <div class="card feature">
+        <h3>🛡️ Keamanan Utama</h3>
+        <p class="muted">File APK ditandatangani (release keystore) dan tersedia dari GitHub Releases resmi.</p>
       </div>
     </section>
 
+    <!-- CUPLIKAN / CAROUSEL -->
+    <section id="cuplikan" class="screens">
+      <div class="card" style="padding:14px">
+        <div class="carousel" id="carousel">
+          <div class="track" id="track">
+            <div class="slide"><img src="https://raw.githubusercontent.com/yuone-id/apkone-store/main/screenshots/1.jpg" alt="Tangkapan layar 1" onerror="this.src='https://raw.githubusercontent.com/yuone-id/apkone-store/main/screenshots/1.png';this.onerror=null;"></div>
+            <div class="slide"><img src="https://raw.githubusercontent.com/yuone-id/apkone-store/main/screenshots/2.jpg" alt="Tangkapan layar 2" onerror="this.src='https://raw.githubusercontent.com/yuone-id/apkone-store/main/screenshots/2.png';this.onerror=null;"></div>
+            <div class="slide"><img src="https://raw.githubusercontent.com/yuone-id/apkone-store/main/screenshots/3.jpg" alt="Tangkapan layar 3" onerror="this.src='https://raw.githubusercontent.com/yuone-id/apkone-store/main/screenshots/3.png';this.onerror=null;"></div>
+          </div>
+        </div>
+        <div class="dots" id="dots"></div>
+      </div>
+    </section>
+
+    <!-- CARA INSTALL / KEAMANAN -->
     <section id="cara" class="how">
       <div class="card step">
-        <h4>Cara Install</h4>
-        <ol class="list">
+        <h3>Cara Install</h3>
+        <ol class="muted" style="margin:0 0 0 18px">
           <li>Aktifkan <em>Install unknown apps</em> di perangkat Anda.</li>
           <li>Unduh APK melalui tombol <strong>Download</strong> di atas.</li>
           <li>Buka file dan ikuti petunjuk instalasi.</li>
         </ol>
-        <p style="opacity:.8;font-size:12px">* Kecepatan top up tergantung metode pembayaran & server game.</p>
+        <p class="muted" style="font-size:12px;margin-top:10px">* Kecepatan top up tergantung metode pembayaran & server game.</p>
       </div>
       <div class="card step">
-        <h4>Catatan Keamanan</h4>
-        <ul class="list">
+        <h3>Catatan Keamanan</h3>
+        <ul class="muted" style="margin:0 0 0 18px">
           <li>Selalu unduh dari halaman resmi ini.</li>
           <li>Jangan memodifikasi file APK.</li>
           <li>Periksa nama paket & versi sebelum instal.</li>
@@ -160,89 +192,77 @@
       </div>
     </section>
 
-    <section id="faq" class="sections">
-      <div class="card section">
-        <h3>Apakah aplikasi gratis?</h3>
-        <p>Ya, Yuone Store dapat diunduh dan digunakan secara gratis. Biaya hanya berlaku pada transaksi top up/voucher.</p>
-      </div>
-      <div class="card section">
-        <h3>Apakah ada di Play Store?</h3>
-        <p>Versi GitHub ini bisa digunakan segera. Versi Play Store akan diumumkan pada rilis mendatang.</p>
-      </div>
-      <div class="card section">
-        <h3>Butuh bantuan?</h3>
-        <p>Silakan buka halaman Issues di GitHub untuk melaporkan bug atau meminta fitur.</p>
-      </div>
-    </section>
-
+    <!-- FOOTER -->
     <div class="footer">
       <div>© <span id="year"></span> Yuone Store. Semua hak dilindungi.</div>
       <div style="display:flex;gap:10px;flex-wrap:wrap">
-        <a class="chip" id="repoLink" href="#" target="_blank" rel="noopener">Repository</a>
-        <a class="chip" id="issuesLink" href="#" target="_blank" rel="noopener">Laporkan Bug</a>
-        <a class="chip" id="changelogLink" href="#" target="_blank" rel="noopener">Changelog</a>
+        <a class="chip" href="https://github.com/yuone-id/apkone-store" target="_blank" rel="noopener">Repository</a>
+        <a class="chip" href="https://github.com/yuone-id/apkone-store/issues" target="_blank" rel="noopener">Laporkan Bug</a>
+        <a class="chip" href="https://github.com/yuone-id/apkone-store/releases" target="_blank" rel="noopener">Changelog</a>
       </div>
     </div>
   </div>
 
-  <script>
-    // === KONFIGURASI: Ganti OWNER & REPO sesuai GitHub kamu ===
-    const GH_OWNER = "OWNER";   // contoh: nobita-zalurachan
-    const GH_REPO  = "REPO";    // contoh: yuone-store
-    const PRIVACY_URL = "#";    // ganti ke link kebijakan privasi jika ada
+  <!-- Sticky CTA (mobile) -->
+  <div class="sticky-cta"><a href="https://github.com/yuone-id/apkone-store/releases/tag/v1.0.0" target="_blank" rel="noopener">📥 Download Yuone Store</a></div>
 
-    const apiLatest = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/releases/latest`;
-    const repoUrl = `https://github.com/${GH_OWNER}/${GH_REPO}`;
-    const issuesUrl = `https://github.com/${GH_OWNER}/${GH_REPO}/issues`;
+  <script>
+    // ====== OPSI: Otomatis tarik info rilis terbaru dari GitHub API ======
+    const OWNER = 'yuone-id';
+    const REPO = 'apkone-store';
+    const HARDCODE_RELEASE = 'https://github.com/yuone-id/apkone-store/releases/tag/v1.0.0';
+    const privacyURL = '#'; // ganti jika sudah ada kebijakan privasi
 
     const $ = (id)=>document.getElementById(id);
+    const dotsEl = $('dots');
+    const track = $('track');
+    const slides = ()=>Array.from(track.children);
 
-    $('repoLink').href = repoUrl;
-    $('issuesLink').href = issuesUrl;
-    $('privacyLink').href = PRIVACY_URL;
+    // Footer year & privacy
     $('year').textContent = new Date().getFullYear();
+    const p = document.getElementById('privacyLink'); if(p) p.href = privacyURL;
 
-    async function init(){
+    // Fetch latest release (gracefully degrade ke HARDCODE_RELEASE)
+    (async()=>{
       try{
-        const res = await fetch(apiLatest);
-        if(!res.ok) throw new Error("Gagal mengambil data rilis");
-        const data = await res.json();
-
-        const tag = data.tag_name || data.name || "v1.0";
-        const published = data.published_at ? new Date(data.published_at) : null;
-        const assetApk = (data.assets || []).find(a=>/\.apk$/i.test(a.name));
-
-        $('version').textContent = tag;
-        $('date').textContent = published ? published.toLocaleDateString() : "-";
-        $('releaseBtn').href = data.html_url || repoUrl + "/releases";
-        $('changelogLink').href = data.html_url || repoUrl + "/releases";
-
-        if(assetApk){
-          $('downloadBtn').href = assetApk.browser_download_url;
-          $('downloadLabel').textContent = `Download ${assetApk.name}`;
-          const sizeMB = (assetApk.size/1024/1024).toFixed(2);
-          $('size').textContent = `${sizeMB} MB`;
+        const r = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/releases/latest`);
+        if(!r.ok) throw new Error('no latest');
+        const data = await r.json();
+        const apk = (data.assets||[]).find(a=>/\.apk$/i.test(a.name));
+        const date = data.published_at ? new Date(data.published_at) : null;
+        document.getElementById('version').textContent = data.tag_name || data.name || '—';
+        document.getElementById('date').textContent = date ? date.toLocaleDateString() : '—';
+        if(apk){
+          document.getElementById('downloadBtn').href = apk.browser_download_url;
+          document.getElementById('downloadLabel').textContent = `Download ${apk.name}`;
+          document.getElementById('size').textContent = (apk.size/1024/1024).toFixed(2)+ ' MB';
         } else {
-          // Fallback: arahkan ke halaman releases jika asset APK tidak ditemukan
-          $('downloadBtn').href = data.html_url || repoUrl + "/releases";
-          $('downloadLabel').textContent = "Download APK (Releases)";
-          $('size').textContent = "-";
+          document.getElementById('downloadBtn').href = data.html_url || HARDCODE_RELEASE;
+          document.getElementById('downloadLabel').textContent = 'Download APK (Releases)';
         }
+        document.getElementById('releaseBtn').href = data.html_url || HARDCODE_RELEASE;
       }catch(e){
-        // Fallback total: gunakan pola URL umum releases/latest
-        const latestUrl = `${repoUrl}/releases/latest`;
-        $('downloadBtn').href = latestUrl;
-        $('downloadLabel').textContent = "Download via Releases";
-        $('releaseBtn').href = latestUrl;
-        $('changelogLink').href = latestUrl;
-        $('version').textContent = "-";
-        $('date').textContent = "-";
-        $('size').textContent = "-";
-        console.warn(e);
+        // fallback ke link manual
+        document.getElementById('downloadBtn').href = HARDCODE_RELEASE;
+        document.getElementById('releaseBtn').href = HARDCODE_RELEASE;
       }
-    }
+    })();
 
-    init();
+    // Carousel minimal
+    let idx = 0; const updateDots=()=>{
+      dotsEl.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active', i===idx));
+    };
+    const initDots = ()=>{
+      dotsEl.innerHTML = '';
+      slides().forEach((_,i)=>{
+        const d = document.createElement('div');
+        d.className = 'dot' + (i===0?' active':'');
+        d.addEventListener('click',()=>{idx=i;track.style.transform = `translateX(-${idx*100}%)`;updateDots();});
+        dotsEl.appendChild(d);
+      });
+    };
+    initDots();
+    setInterval(()=>{ idx = (idx+1) % slides().length; track.style.transform = `translateX(-${idx*100}%)`; updateDots(); }, 4000);
   </script>
 </body>
 </html>
