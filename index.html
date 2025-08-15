@@ -1,120 +1,203 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuone Store - Download APK</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            background-color: #0e0e0e;
-            color: #fff;
-        }
-        /* HEADER */
-        header {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #ff0066, #6600ff);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        header img {
-            max-width: 140px;
-            margin-bottom: 20px;
-        }
-        header h1 {
-            font-size: 3rem;
-            margin: 10px 0;
-        }
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.85;
-            max-width: 500px;
-        }
-        /* BUTTON */
-        .download-btn {
-            display: inline-block;
-            padding: 15px 40px;
-            margin-top: 30px;
-            background: #00ffcc;
-            color: #000;
-            font-weight: bold;
-            font-size: 1.1rem;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(0,255,204,0.4);
-        }
-        .download-btn:hover {
-            background: #00e6b8;
-            box-shadow: 0 6px 20px rgba(0,255,204,0.6);
-        }
-        /* SECTION */
-        section {
-            padding: 60px 20px;
-            max-width: 1000px;
-            margin: auto;
-            text-align: center;
-        }
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-        }
-        .gallery {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .gallery img {
-            width: 250px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-            transition: transform 0.3s ease;
-        }
-        .gallery img:hover {
-            transform: translateY(-5px);
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #111;
-            font-size: 0.9rem;
-            opacity: 0.7;
-        }
-        footer a {
-            color: #ff0066;
-            text-decoration: none;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yuone Store - Download APK</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        margin: 0;
+        background-color: #0e0e0e;
+        color: #fff;
+    }
+    header {
+        background: linear-gradient(135deg, #ff0066, #6600ff);
+        padding: 60px 20px;
+        text-align: center;
+    }
+    header img {
+        max-width: 120px;
+        border-radius: 20px;
+        animation: fadeIn 1s ease-in-out;
+    }
+    header h1 {
+        font-size: 2.5rem;
+        margin: 15px 0 10px;
+    }
+    header p {
+        font-size: 1.1rem;
+        opacity: 0.85;
+        max-width: 600px;
+        margin: auto;
+    }
+    .download-btn {
+        display: inline-block;
+        padding: 15px 40px;
+        margin-top: 25px;
+        background: #00ffcc;
+        color: #000;
+        font-weight: bold;
+        font-size: 1.1rem;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: 0.3s;
+        box-shadow: 0 4px 15px rgba(0,255,204,0.4);
+        animation: fadeInUp 1s ease-in-out;
+    }
+    .download-btn:hover {
+        background: #00e6b8;
+        box-shadow: 0 6px 20px rgba(0,255,204,0.6);
+    }
+    section {
+        padding: 50px 20px;
+        max-width: 1100px;
+        margin: auto;
+    }
+    section h2 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        text-align: center;
+    }
+    .feature {
+        background: #1a1a1a;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+        animation: fadeInUp 1s ease-in-out;
+    }
+    .feature h3 {
+        margin-bottom: 10px;
+        color: #00ffcc;
+    }
+    /* Slider */
+    .slider {
+        position: relative;
+        max-width: 900px;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    .slides img {
+        width: 100%;
+        pointer-events: none;
+        user-select: none;
+    }
+    .nav-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.5);
+        color: #fff;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #111;
+        font-size: 0.9rem;
+        opacity: 0.7;
+    }
+    footer a {
+        color: #ff0066;
+        text-decoration: none;
+    }
+    /* Animations */
+    @keyframes fadeIn {
+        from {opacity: 0; transform: scale(0.9);}
+        to {opacity: 1; transform: scale(1);}
+    }
+    @keyframes fadeInUp {
+        from {opacity: 0; transform: translateY(20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+</style>
 </head>
 <body>
-    <!-- HEADER -->
-    <header>
-        <img src="yuone-id.png" alt="Yuone Store Logo">
-        <h1>Yuone Store</h1>
-        <p>Top Up Game & Voucher Digital Termurah • Cepat • Aman</p>
-        <a href="https://github.com/yuone-id/apkone-store/releases/download/v1.0.0/app-debug.apk" class="download-btn">⬇ Download APK</a>
-    </header>
 
-    <!-- GALLERY -->
-    <section>
-        <h2>Tangkapan Layar</h2>
-        <div class="gallery">
-            <img src="gambar1.jpg" alt="Screenshot 1">
-            <img src="gambar2.jpg" alt="Screenshot 2">
-            <img src="gambar3.jpg" alt="Screenshot 3">
+<header>
+    <img src="yuone.id1.png" alt="Yuone Store Logo">
+    <h1>Yuone Store</h1>
+    <p>Platform terpercaya untuk top up game & pembelian voucher digital dengan harga murah, proses cepat, dan aman.</p>
+    <a href="https://github.com/yuone-id/apkone-store/releases/download/v1.0.0/app-debug.apk" class="download-btn">⬇ Download APK</a>
+</header>
+
+<section>
+    <h2>Tentang Aplikasi</h2>
+    <div class="features">
+        <div class="feature">
+            <h3>💎 Harga Murah</h3>
+            <p>Yuone Store menawarkan harga kompetitif untuk semua top up game populer dan voucher digital.</p>
         </div>
-    </section>
+        <div class="feature">
+            <h3>⚡ Proses Cepat</h3>
+            <p>Top up dan pembelian voucher hanya dalam hitungan detik, tanpa ribet.</p>
+        </div>
+        <div class="feature">
+            <h3>🔒 Aman & Terpercaya</h3>
+            <p>Transaksi dijamin aman dengan metode pembayaran yang terpercaya.</p>
+        </div>
+    </div>
+</section>
 
-    <!-- FOOTER -->
-    <footer>
-        © 2025 Yuone Store • <a href="https://yuone-id.github.io/apkone-store/">GitHub</a>
-    </footer>
+<section>
+    <h2>Tangkapan Layar</h2>
+    <div class="slider" id="slider">
+        <div class="slides">
+            <img src="Gambar1.jpg" alt="Screenshot 1">
+            <img src="Gambar2.jpg" alt="Screenshot 2">
+            <img src="Gambar3.jpg" alt="Screenshot 3">
+        </div>
+        <button class="nav-btn prev" onclick="prevSlide()">❮</button>
+        <button class="nav-btn next" onclick="nextSlide()">❯</button>
+    </div>
+</section>
+
+<footer>
+    © 2025 Yuone Store • <a href="https://github.com/yuone-id">GitHub</a>
+</footer>
+
+<script>
+let index = 0;
+const slides = document.querySelector(".slides");
+const totalSlides = document.querySelectorAll(".slides img").length;
+
+function showSlide(i) {
+    index = (i + totalSlides) % totalSlides;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+}
+
+function nextSlide() { showSlide(index + 1); }
+function prevSlide() { showSlide(index - 1); }
+
+// Auto slide
+setInterval(nextSlide, 4000);
+
+// Swipe support
+let startX = 0;
+slides.addEventListener("touchstart", e => startX = e.touches[0].clientX);
+slides.addEventListener("touchend", e => {
+    let endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) nextSlide();
+    if (endX - startX > 50) prevSlide();
+});
+</script>
+
 </body>
 </html>
-
