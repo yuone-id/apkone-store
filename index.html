@@ -78,16 +78,23 @@ async function loadImages() {
     const res = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents?ref=${branch}`);
     const files = await res.json();
 
-    // Logo
+    // Ambil logo (nama mengandung "yuone")
     const logoFile = files.find(f => f.name.toLowerCase().includes("yuone"));
     if (logoFile) {
-        document.getElementById("logo").src = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/${branch}/${encodeURIComponent(logoFile.name)}`;
+        document.getElementById("logo").src =
+            `https://raw.githubusercontent.com/${repoOwner}/${repoName}/${branch}/${encodeURIComponent(logoFile.name)}`;
     }
 
-    // Slider images
-    const imageFiles = files.filter(f => /\.(jpg|jpeg|png)$/i.test(f.name) && !f.name.toLowerCase().includes("yuone"));
-    const slidesContainer = document.getElementById("slides");
+    // Ambil semua gambar kecuali logo
+    let imageFiles = files.filter(f =>
+        /\.(jpg|jpeg|png)$/i.test(f.name) && !f.name.toLowerCase().includes("yuone")
+    );
 
+    // Urutkan berdasarkan nama file
+    imageFiles.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }));
+
+    // Tambahkan ke slider
+    const slidesContainer = document.getElementById("slides");
     imageFiles.forEach(img => {
         const imgEl = document.createElement("img");
         imgEl.src = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/${branch}/${encodeURIComponent(img.name)}`;
